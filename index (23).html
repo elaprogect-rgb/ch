@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EGG</title>
+<!-- Repo: https://github.com/elaprogect-rgb/ch  (egg.css and egg.js sit in the repo root next to the assets) -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/elaprogect-rgb/ch@main/egg.css">
+</head>
+<body>
+<div id="app">
+
+  <!-- MAIN MENU -->
+  <section id="menu" class="screen">
+    <img id="logo" alt="EGG">
+    <div id="menuBtns">
+      <button class="btn" data-act="play">Play</button>
+      <button class="btn" data-act="badges">Badges</button>
+      <button class="btn" data-act="pit" id="pitBtn" hidden>PIT</button>
+    </div>
+    <p class="small">&larr; / &rarr; select &nbsp;&middot;&nbsp; Enter confirm</p>
+  </section>
+
+  <!-- BADGES -->
+  <section id="badges" class="screen" hidden>
+    <h2>Badges</h2>
+    <div id="badgeGrid"></div>
+    <div class="row"><button class="btn" data-act="back">Back</button></div>
+  </section>
+
+  <!-- PIT INTRO + MODE SELECT -->
+  <section id="pitIntro" class="screen red" hidden>
+    <img id="pitIntroImg" class="fullimg" alt="">
+  </section>
+  <section id="mode" class="screen red" hidden>
+    <div id="modeWrap">
+      <img id="modeImg" alt="">
+      <button class="hot" id="hotDecay" data-act="decay" aria-label="Decay"></button>
+      <button class="hot" id="hotRot" data-act="rot" aria-label="roT"></button>
+    </div>
+  </section>
+
+  <!-- GAME -->
+  <section id="game" class="screen" hidden>
+    <div id="stage">
+      <div id="hud"><div id="hearts"></div><div id="score"></div></div>
+      <div id="eggs"></div>
+      <img id="mime" alt="" hidden>
+      <div id="ire" hidden></div>
+      <img id="player" alt="">
+      <div id="banner" hidden></div>
+    </div>
+  </section>
+
+  <!-- INTERMISSION (roT) -->
+  <section id="inter" class="screen dim" hidden>
+    <h2>Choose an entity</h2>
+    <div id="cards"></div>
+    <p class="small">&larr; / &rarr; select &nbsp;&middot;&nbsp; Enter confirm</p>
+  </section>
+
+  <!-- GAME OVER / VICTORY -->
+  <section id="end" class="screen dim" hidden>
+    <h2 id="endTitle"></h2>
+    <p id="endStats"></p>
+    <div class="row">
+      <button class="btn" data-act="retry">Again</button>
+      <button class="btn" data-act="menu">Menu</button>
+    </div>
+  </section>
+
+  <div id="overlay" hidden></div>
+  <div id="toast" hidden></div>
+  <div id="assetErrors" hidden></div>
+</div>
+<script src="https://cdn.jsdelivr.net/gh/elaprogect-rgb/ch@main/egg.js"></script>
+</body>
+</html>
