@@ -521,11 +521,11 @@ function updateIre(g, dt) {
   switch (I.state) {
     case 'idle':
       I.t -= dt;
-      if (I.t <= 0) { I.state = 'spawn'; I.t = 2.0; I.spawnAt = g.time; I.killT = null; }
+      if (I.t <= 0) { I.state = 'spawn'; I.t = 0.5; I.spawnAt = g.time; I.killT = null; }
       break;
     case 'spawn':
       I.t -= dt;
-      if (I.t <= 0) { I.state = 'semi'; I.t = 2.6; }
+      if (I.t <= 0) { I.state = 'semi'; I.t = 0.63; }
       break;
     case 'semi':
       I.t -= dt;
